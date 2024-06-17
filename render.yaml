@@ -1,0 +1,73 @@
+# Exported from Render on 2024-06-17T09:15:00Z
+services:
+- type: web
+  name: nightscout
+  runtime: node
+  repo: https://github.com/TWilhoWI/cgm-remote-monitor
+  plan: free
+  envVars:
+  - key: TIME_FORMAT
+    sync: false
+  - key: THEME
+    sync: false
+  - key: SHOW_RAWBG
+    sync: false
+  - key: SHOW_PLUGINS
+    sync: false
+  - key: NIGHT_MODE
+    sync: false
+  - key: MONGODB_URI
+    sync: false
+  - key: INSECURE_USE_HTTP
+    sync: false
+  - key: HOSTNAME
+    sync: false
+  - key: ENABLE
+    sync: false
+  - key: DISPLAY_UNITS
+    sync: false
+  - key: CUSTOM_TITLE
+    sync: false
+  - key: BRIDGE_USER_NAME
+    sync: false
+  - key: BRIDGE_SERVER
+    sync: false
+  - key: BRIDGE_PASSWORD
+    sync: false
+  - key: BOLUS_RENDER_OVER
+    sync: false
+  - key: BG_TARGET_TOP
+    sync: false
+  - key: BG_TARGET_BOTTOM
+    sync: false
+  - key: BG_LOW
+    sync: false
+  - key: BG_HIGH
+    sync: false
+  - key: AUTH_DEFAULT_ROLES
+    sync: false
+  - key: API_SECRET
+    sync: false
+  - key: ALARM_URGENT_LOW
+    sync: false
+  - key: ALARM_URGENT_HIGH
+    sync: false
+  - key: ALARM_TYPES
+    sync: false
+  - key: ALARM_TIMEAGO_WARN_MINS
+    sync: false
+  - key: ALARM_TIMEAGO_WARN
+    sync: false
+  - key: ALARM_TIMEAGO_URGENT_MINS
+    sync: false
+  - key: ALARM_TIMEAGO_URGENT
+    sync: false
+  - key: ALARM_LOW
+    sync: false
+  - key: ALARM_HIGH
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: npm start
+  healthCheckPath: /
+version: "1"
